@@ -51,7 +51,7 @@ if submitted:
                 "age": int(age) if age else None,
                 "feedback": feedback.strip() if feedback else None,
             }
-            resp = supabase.table("submissions").insert(row).execute()
+            resp = supabase.table("Submissions").insert(row).execute()
             if resp.data:
                 st.success("✅ Submitted successfully!")
                 st.json(resp.data[0])  # show the inserted row briefly
